@@ -1,6 +1,6 @@
 ### Hi! I'm Maria Eduarda Cagy👋
-- 🔭 Now I'm a front-end trainee
-- 🌱 I'm studying Python for Data Analysis
+- 🔭 Now I'm a Full Stack Júnior Developer
+- 🌱 I'm studying React and Python
 - 😄 Pronouns: she/her
 
 <div>
