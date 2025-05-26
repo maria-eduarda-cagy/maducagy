@@ -3,4 +3,5 @@
 - 🌱 I'm studying React and Python
 - 😄 Pronouns: she/her
 
+Projects:
 - Personal SaaS project for clinic appointment scheduling using AI.
