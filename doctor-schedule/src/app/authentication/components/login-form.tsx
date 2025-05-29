@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-const registerSchema = z.object({
+const loginShema = z.object({
   name: z.string().trim().min(2, { message: "Nome é obrigatório" }).max(50),
   email: z
     .string()
@@ -34,16 +34,16 @@ const registerSchema = z.object({
     .trim()
     .min(8, { message: "A senha deve ter pelo menos 8 caracteres" }),
 });
-const SignUpForm = () => {
-  const form = useForm<z.infer<typeof registerSchema>>({
-    resolver: zodResolver(registerSchema),
+const LoginForm = () => {
+  const form = useForm<z.infer<typeof loginShema>>({
+    resolver: zodResolver(loginShema),
     defaultValues: {
       name: "",
       email: "",
       password: "",
     },
   });
-  function onSubmit(values: z.infer<typeof registerSchema>) {
+  function onSubmit(values: z.infer<typeof loginShema>) {
     console.log(values);
   }
   return (
@@ -51,23 +51,10 @@ const SignUpForm = () => {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           <CardHeader>
-            <CardTitle>Criar Conta</CardTitle>
-            <CardDescription>Crie uma conta para continuar</CardDescription>
+            <CardTitle>Login</CardTitle>
+            <CardDescription>Faça login para continuar</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Nome</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Nome" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
             <FormField
               control={form.control}
               name="email"
@@ -96,11 +83,11 @@ const SignUpForm = () => {
             />
           </CardContent>
           <CardFooter>
-            <Button type="submit">Crie Uma Conta</Button>
+            <Button type="submit">Entrar</Button>
           </CardFooter>{" "}
         </form>
       </Form>
     </Card>
   );
 };
-export default SignUpForm;
+export default LoginForm;
