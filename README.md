@@ -4,4 +4,5 @@
 - 😄 Pronouns: she/her
 
 Projects:
-- Personal SaaS project for clinic appointment scheduling using AI.
+- Personal SaaS project for clinic appointment.
+- 
